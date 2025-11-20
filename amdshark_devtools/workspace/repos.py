@@ -1,4 +1,4 @@
-# Copyright 2023 The SHARK Authors
+# Copyright 2023 The AMD-SHARK Authors
 #
 # Licensed under the Apache License v2.0 with LLVM Exceptions.
 # See https://llvm.org/LICENSE.txt for license information.
@@ -23,15 +23,15 @@ types.RepoInfo(
     submodules=True,
 )
 types.RepoInfo(
-    name="SHARK-devtools",
-    ro_url="https://github.com/nod-ai/SHARK-devtools.git",
-    rw_url="git@github.com:nod-ai/SHARK-devtools.git",
+    name="AMD-SHARK-devtools",
+    ro_url="https://github.com/nod-ai/AMD-SHARK-devtools.git",
+    rw_url="git@github.com:nod-ai/AMD-SHARK-devtools.git",
     deps=[],
 )
 types.RepoInfo(
-    name="SHARK-Turbine",
-    ro_url="https://github.com/nod-ai/SHARK-Turbine.git",
-    rw_url="git@github.com:nod-ai/SHARK-Turbine.git",
+    name="AMD-SHARK-Turbine",
+    ro_url="https://github.com/nod-ai/AMD-SHARK-Turbine.git",
+    rw_url="git@github.com:nod-ai/AMD-SHARK-Turbine.git",
     deps=["iree", "torch-mlir"],
 )
 types.RepoInfo(
@@ -76,7 +76,7 @@ types.RepoInfo(
 #                 "iree-compiler",
 #                 pip_flags=[
 #                     "-f",
-#                     "https://shark.github.io/iree/pip-release-links.html"
+#                     "https://amdshark.github.io/iree/pip-release-links.html"
 #                 ],
 #                 update_requirements=["requirements.txt"]),
 #             roller.PyPackage(
@@ -125,7 +125,7 @@ def get_from_dir(dir: Path) -> Tuple[types.WorkspaceMeta, types.RepoInfo]:
     repo = types.ALL_REPOS.get(toplevel.name)
     if not repo:
         raise types.CLIError(
-            f"Git repository {toplevel} is not a known SHARK repository"
+            f"Git repository {toplevel} is not a known AMD-SHARK repository"
         )
     return ws, repo, toplevel
 

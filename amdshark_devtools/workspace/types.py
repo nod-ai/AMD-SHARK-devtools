@@ -1,4 +1,4 @@
-# Copyright 2023 The SHARK Authors
+# Copyright 2023 The AMD-SHARK Authors
 #
 # Licensed under the Apache License v2.0 with LLVM Exceptions.
 # See https://llvm.org/LICENSE.txt for license information.
@@ -17,7 +17,7 @@ class CLIError(Exception):
     ...
 
 
-META_FILENAME = ".shark_workspace.json"
+META_FILENAME = ".amdshark_workspace.json"
 WS_VERSION = 0
 
 

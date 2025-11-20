@@ -1,4 +1,4 @@
-# Copyright 2023 The SHARK Authors
+# Copyright 2023 The AMD-SHARK Authors
 #
 # Licensed under the Apache License v2.0 with LLVM Exceptions.
 # See https://llvm.org/LICENSE.txt for license information.
@@ -18,7 +18,7 @@ def run(args, cwd) -> subprocess.CompletedProcess:
     new_env = dict(os.environ)
     new_env["PYTHONPATH"] = Path(__file__).resolve().parent
     cp = subprocess.run(
-        [sys.executable, "-m", "shark_devtools.workspace"] + args,
+        [sys.executable, "-m", "amdshark_devtools.workspace"] + args,
         env=new_env,
         capture_output=True,
         text=True,

@@ -1,7 +1,7 @@
-# SHARK Development Tools
+# AMD-SHARK Development Tools
 
 This repository contains a Python package providing development tools
-that span the SHARK suite of projects under.
+that span the AMD-SHARK suite of projects under.
 
 It is primarily intended to be installed by developers. In everyday use,
 it should not be necessary to actual modify the tools themselves.
@@ -9,26 +9,26 @@ it should not be necessary to actual modify the tools themselves.
 ## Installing the tools
 
 ```
-pip install git+https://github.com/nod-ai/SHARK-devtools.git
+pip install git+https://github.com/nod-ai/AMD-SHARK-devtools.git
 ```
 
-## shark-ws User's Guide
+## amdshark-ws User's Guide
 
-The `shark-ws` command is used to:
+The `amdshark-ws` command is used to:
 
-* Setup and maintain an "SHARK workspace" (collection of individual project
+* Setup and maintain an "AMD-SHARK workspace" (collection of individual project
   repositories).
 * Checkout individual project repositories.
 * Sync repositories to pinned versions.
 * Update pinned version.
 
-Quick start to create an shark repository and start developing:
+Quick start to create an amdshark repository and start developing:
 
 ```
-mkdir ~/shark
-cd ~/shark
-shark-ws init
-shark-ws checkout --sync sample-project
+mkdir ~/amdshark
+cd ~/amdshark
+amdshark-ws init
+amdshark-ws checkout --sync sample-project
 ```
 
 The above will initialize a new workspace and checkout the `sample-project`
@@ -45,7 +45,7 @@ pinned revisions of all deps recursively.
 NOTE: Some projects manage their dependencies via submodules. Such cases are
 not covered here (just use normal `git` tools).
 
-If a project depends on other SHARK projects, it expresses these dependencies
+If a project depends on other AMD-SHARK projects, it expresses these dependencies
 via `sync_deps.py` script in the root of its repository. This script is both
 importable (in order to get programmatic access to dependencies) and runnable
 (so that end-developers and CI systems have the simplest possible mechanism
@@ -53,13 +53,13 @@ to check everything out needed to build the project).
 
 When it is time to update the pins in this file, bring the dependencies of
 interest to the desired commit (and land it in the corresponding dependency
-repo). Then, from the project to be updated, run `shark-ws pin`.
+repo). Then, from the project to be updated, run `amdshark-ws pin`.
 
 Example:
 
 ```
-cd ~/shark/sample-project
-shark-ws pin --require-upstream
+cd ~/amdshark/sample-project
+amdshark-ws pin --require-upstream
 ```
 
 Note that the `--require-upstream` flag enables an (expensive) safety check
@@ -95,6 +95,6 @@ steps for upgrading packages.
 Invoke a dependency roll with a command like this:
 
 ```
-cd ~/shark/sample-project
-shark-ws roll nightly
+cd ~/amdshark/sample-project
+amdshark-ws roll nightly
 ```
