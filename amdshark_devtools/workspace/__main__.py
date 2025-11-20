@@ -1,4 +1,4 @@
-# Copyright 2023 The SHARK Authors
+# Copyright 2023 The AMD-SHARK Authors
 #
 # Licensed under the Apache License v2.0 with LLVM Exceptions.
 # See https://llvm.org/LICENSE.txt for license information.
@@ -16,7 +16,7 @@ from . import types
 
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description="SHARK Workspace Tool")
+    parser = argparse.ArgumentParser(description="AMD-SHARK Workspace Tool")
     subparsers = parser.add_subparsers(
         help="sub-command help", required=True, dest="sub_command"
     )

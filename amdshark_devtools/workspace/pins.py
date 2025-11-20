@@ -1,4 +1,4 @@
-# Copyright 2023 The SHARK Authors
+# Copyright 2023 The AMD-SHARK Authors
 #
 # Licensed under the Apache License v2.0 with LLVM Exceptions.
 # See https://llvm.org/LICENSE.txt for license information.
@@ -203,8 +203,8 @@ def process_pin_file(repo_top: Path, callback) -> bool:
             f.write("### Casual developers and CI bots invoke this to do the most\n")
             f.write("### efficient checkout of dependencies.\n")
             f.write("### Cross-repo project development should use the \n")
-            f.write("### 'shark-workspace' dev tool for more full featured setup.\n")
-            f.write("### Update with: shark-workspace pin\n\n")
+            f.write("### 'amdshark-workspace' dev tool for more full featured setup.\n")
+            f.write("### Update with: amdshark-workspace pin\n\n")
             f.write(f"{PIN_DICT_NAME} = {json.dumps(pinned_versions, indent=2)}\n\n")
             f.write(f"ORIGINS = {json.dumps(origins, indent=2)}\n\n")
             f.write(f"SUBMODULES = {json.dumps(submodules, indent=2)}\n\n")
