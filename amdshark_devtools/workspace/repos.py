@@ -30,8 +30,8 @@ types.RepoInfo(
 )
 types.RepoInfo(
     name="AMD-SHARK-Turbine",
-    ro_url="https://github.com/nod-ai/AMD-SHARK-Turbine.git",
-    rw_url="git@github.com:nod-ai/AMD-SHARK-Turbine.git",
+    ro_url="https://github.com/nod-ai/AMD-SHARK-ModelDev.git",
+    rw_url="git@github.com:nod-ai/AMD-SHARK-ModelDev.git",
     deps=["iree", "torch-mlir"],
 )
 types.RepoInfo(
